@@ -1,0 +1,1 @@
+var variavel = 'isso e uma variavel'
