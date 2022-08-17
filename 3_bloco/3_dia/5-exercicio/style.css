@@ -1,0 +1,40 @@
+ol {
+    background-color: yellow;
+}
+
+li.par {
+    color: green;
+}
+
+li.impar {
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    color: red;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+li.first3 {
+    color: blue;
+} 
+
+li.java {
+    background-color: pink;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+#stack:hover {
+    color:orange;
+}
