@@ -99,3 +99,53 @@ function createButtonFriday(friday) {
 }
 
 createButtonFriday('Sexta-feira');
+
+function modTextFriday() {
+    
+    let getFridayButton = document.querySelector('#btn-friday');
+    let getFridays = document.getElementsByClassName('friday');
+    let newText = 'Sexta-feira!!!';
+
+    getFridayButton.addEventListener('click', function() {
+        for (let i in getFridays) {
+            if (getFridays[i].innerHTML !== newText) {
+                getFridays[i].innerHTML = newText;
+            } else {
+                getFridays[i].innerHTML = friday[i];
+            }
+        } 
+    })
+}
+
+modTextFriday([4, 11, 18, 25]);
+
+function dayMouseOver() {
+    let days = document.querySelector('#days');
+    days.addEventListener('mouseover', function(event) {
+      event.target.style.fontSize = '25px';
+      event.target.style.fontWeight = '700';
+    });
+  }
+  
+  function dayMouseOut() {
+    let days = document.querySelector('#days');
+    days.addEventListener('mouseout', function(event) {
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+    });
+  }
+
+dayMouseOver();
+dayMouseOut();
+
+function addTask(task) {
+    const taskContainer = document.querySelector('.my-tasks');
+    const taskItem = document.createElement('span');
+
+    taskItem.innerHTML = task;
+    taskItem.style.color = 'blue';
+
+    taskContainer.appendChild(taskItem);
+}
+
+addTask('Tarefa aleatória!');
