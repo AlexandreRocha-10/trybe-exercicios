@@ -50,8 +50,8 @@ createDaysOfTheMonth();
 
 function createButtonHoliday(holidays) {
 
-    const buttonContainer = document.querySelector('.buttons-container');
-    const button = document.createElement('button');
+    let buttonContainer = document.querySelector('.buttons-container');
+    let button = document.createElement('button');
 
     button.id = 'btn-holiday';
     button.innerHTML = holidays;
@@ -89,8 +89,8 @@ changeColorHolidays();
 
 function createButtonFriday(friday) {
 
-    const buttonFridayContainer = document.querySelector('.buttons-container');
-    const buttonFriday = document.createElement('button');
+    let buttonFridayContainer = document.querySelector('.buttons-container');
+    let buttonFriday = document.createElement('button');
 
     buttonFriday.id = 'btn-friday';
     buttonFriday.innerHTML = friday;
@@ -139,8 +139,8 @@ dayMouseOver();
 dayMouseOut();
 
 function addTask(task) {
-    const taskContainer = document.querySelector('.my-tasks');
-    const taskItem = document.createElement('span');
+    let taskContainer = document.querySelector('.my-tasks');
+    let taskItem = document.createElement('span');
 
     taskItem.innerHTML = task;
     taskItem.style.color = 'blue';
@@ -149,3 +149,51 @@ function addTask(task) {
 }
 
 addTask('Tarefa aleatória!');
+
+function addSubtitle(backColor) {
+
+    let taskContainer = document.querySelector('.my-tasks');
+    let taskElement = document.createElement('div');
+
+    taskElement.className = 'task';
+    taskElement.style.backgroundColor = backColor;
+
+    taskContainer.appendChild(taskElement);
+}
+
+addSubtitle('red');
+
+function selectTask() {
+
+    let selectElement = document.querySelector('.task');
+    let selectedTask = document.getElementsByClassName('task selected');
+
+    selectElement.addEventListener('click', function(event) {
+        if (selectedTask.length === 0) {
+            event.target.className = 'task selected';
+        } else {
+            event.target.className = 'task';
+        }
+    })
+}
+
+selectTask();
+
+function changeColor() {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let days = document.querySelector('#days');
+    let taskDiv = document.querySelector('.task');
+    let taskColor = taskDiv.style.backgroundColor;
+    
+    days.addEventListener('click', function(event){
+        let eventTargetColor = event.target.style.color;
+        if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+            let color = selectedTask[0].style.backgroundColor;
+            event.target.style.color = color;
+          } else if (eventTargetColor === taskColor) {
+            event.target.style.color = 'rgb(119,119,119)';
+          }
+    });
+  }
+
+  changeColor();
