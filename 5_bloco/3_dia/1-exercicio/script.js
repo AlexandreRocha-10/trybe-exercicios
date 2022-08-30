@@ -47,3 +47,43 @@ function createDaysOfTheMonth() {
 }
 
 createDaysOfTheMonth();
+
+function createButtonHoliday(holidays) {
+
+    const buttonContainer = document.querySelector('.buttons-container');
+    const button = document.createElement('button');
+
+    button.id = 'btn-holiday';
+    button.innerHTML = holidays;
+
+    buttonContainer.appendChild(button);
+
+}
+
+createButtonHoliday('feriados');
+
+function changeColorHolidays() {
+
+    let getHolidayButton = document.querySelector('#btn-holiday');
+    let getHolidays = document.querySelectorAll('.holiday')
+    let backgroundColor = 'rgb(238,238,238)';
+    let setNewColor = 'blue';
+    let numColor = 'white';
+    let originalColor = '#666';
+  
+    getHolidayButton.addEventListener('click', function() {
+      for (let index = 0; index < getHolidays.length; index += 1) {
+        if (getHolidays[index].style.backgroundColor === setNewColor) {
+          getHolidays[index].style.backgroundColor = backgroundColor;
+          getHolidays[index].style.color = originalColor;
+        } else {
+          getHolidays[index].style.backgroundColor = setNewColor;
+          getHolidays[index].style.color = originalColor;
+          getHolidays[index].style.color = numColor;
+        }
+      }
+    })
+}
+
+changeColorHolidays();
+
