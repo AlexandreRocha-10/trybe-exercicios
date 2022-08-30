@@ -87,3 +87,15 @@ function changeColorHolidays() {
 
 changeColorHolidays();
 
+function createButtonFriday(friday) {
+
+    const buttonFridayContainer = document.querySelector('.buttons-container');
+    const buttonFriday = document.createElement('button');
+
+    buttonFriday.id = 'btn-friday';
+    buttonFriday.innerHTML = friday;
+
+    buttonFridayContainer.appendChild(buttonFriday);
+}
+
+createButtonFriday('Sexta-feira');
