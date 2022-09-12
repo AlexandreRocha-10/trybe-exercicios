@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+</head>
+<body>
+    <header id="form-header">
+        <h1>TrybeTrip</h1>
+        <p><em>Concorra a viagem dos seus sonhos!</em></p>
+    </header>
+    <main>
+        <form action="" method="get" class="vacation-form">
+            <fieldset id="container">
+                <div class="form-row">
+                    <div class="line-content">
+                      <label for="name">Nome:</label>
+                      <input type="text" name="name" id="name">
+                    </div>
+                    <div class="line-content">
+                      <label for="email">E-mail:</label>
+                      <input type="text" name="email" id="email">
+                    </div>
+                </div>
+                <div class="line-content">
+                    <input type="radio" name="destination" id="destination-1" value="city">
+                    <label for="destination-1">Cidade</label>
+                    <input type="radio" name="destination" id="destination-2" value="field">
+                    <label for="destination-2">Campo</label>
+                    <input type="radio" name="destination" id="destination-3" value="beach">
+                    <label for="destination-3">Praia</label>
+                    <input type="radio" name="destination" id="destination-4" value="mountain">
+                    <label for="destination-4">Montanhas</label>
+                </div>
+                <div class="line-content">
+                  <label for="reason">Motivo por qual você deve ser o escolhido:</label>
+                  <textarea placeholder="Eu devo ser o escolhido porque..." name="reason" id="reason" ></textarea>
+                </div>
+                
+                <div class="line-content">
+                  <label for="date">Melhor data da sua viagem:</label>
+                  <input type="text" name="date" id="datepicker">
+                </div>
+                <div class="line-content">
+                  <input type="checkbox" name="ofertas" id="ofertas">
+                  <label for="ofertas"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe.</label>
+                </div>
+                <div class="line-content">
+                  <input type="checkbox" name="direito-imagem" id="direito-imagem">
+                  <label for="direito-imagem"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                </div>
+            </fieldset>
+
+            <div class="line-content">
+              <button type="submit" id="submit-btn">Enviar</button>
+              <button type="submit" id="clear-btn">Apagar</button>      
+            </div>
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
