@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrybeTrip</title>
+
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
 </head>
 <body>
     <header id="form-header">
@@ -42,7 +47,7 @@
                 
                 <div class="line-content">
                   <label for="date">Melhor data da sua viagem:</label>
-                  <input type="date" name="date" id="date">
+                  <input type="text" name="date" id="datepicker">
                 </div>
                 <div class="line-content">
                   <input type="checkbox" name="ofertas" id="ofertas">
