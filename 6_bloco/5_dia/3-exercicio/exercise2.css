@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+}
+  
+p {
+  padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header p {
+    font-size: 2em;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) { 
+  .container {
+    flex-direction: column;
+  }
+  p {
+    padding: 10px;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+}
