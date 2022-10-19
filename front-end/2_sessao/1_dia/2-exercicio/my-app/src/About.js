@@ -5,7 +5,7 @@ class About extends React.Component {
     return (
       <div>
         <h1>
-          Alexandre Rocha'
+          Alexandre Rocha
         </h1>
         <p>
           Minha descrição
